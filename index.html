@@ -1,0 +1,23 @@
+<html>
+  <head> 
+    <script>
+      function getRandomNumber() {
+        const chislo = Math.floor(Math.random() * 10);
+        return chislo;
+      }
+
+      let chislo = getRandomNumber();
+
+      let chislo2 = prompt("Угадай число от 1 до 10");
+      while (chislo != chislo2) {
+        if (chislo < chislo2) {
+          chislo2 = prompt("Твое число больше " + chislo2 + ". Угадай число от 1 до 10");
+        }
+        else {
+          chislo2 = prompt("Твое число меньше " + chislo2 + ". Угадай число от 1 до 10");
+        }
+      }
+      alert("Угадал!" + chislo2);
+    </script>
+  </head>
+</html>
