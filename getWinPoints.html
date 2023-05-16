@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function getwinPoints(funk) {
+                const fun = (parseInt(funk.one) + parseInt(funk.two) + parseInt(funk.three));
+                return fun;
+            }
+
+          
+                let goodMan = {};
+                let badMan = {};
+                let evilMan = {};
+           
+                goodMan.one = prompt("Какое здоровье у goodMan?");
+                goodMan.two = prompt("Какая атака у goodMan?");
+                goodMan.three = prompt("Какая защита у goodMan?");
+
+                badMan.one = prompt("Какое здоровье у badMan?");
+                badMan.two = prompt("Какая атака у badMan?");
+                badMan.three = prompt("Какая защита у badMan?");
+
+                evilMan.one = prompt("Какое здоровье у evilMan?");
+                evilMan.two = prompt("Какая атака у evilMan?");
+                evilMan.three = prompt("Какая защита у evilMan?");
+
+                const resultGoodMan = getwinPoints(goodMan);
+                const resultBadMan = getwinPoints(badMan);
+                const resultEvilMan = getwinPoints(evilMan);
+                let resultDiv = document.getElementById("result");
+
+                if (resultGoodMan > resultBadMan && resultGoodMan > resultEvilMan) {
+                    resultDiv.innerHTML = "Победил goodMan";
+                } else if (resultBadMan > resultGoodMan && resultBadMan > resultEvilMan) {
+                    resultDiv.innerHTML = "Победил badMan";
+                } else {
+                    resultDiv.innerHTML = "Победил evilMan";
+                }
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id="result">Результат голосования</div>
+        </div>
+    </body>
+</html>
