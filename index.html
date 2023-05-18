@@ -1,20 +1,20 @@
 <html>
   <head> 
     <script>
-      function getRandomNumber() {
-        const chislo = Math.floor(Math.random() * 10);
+      function getRandomNumber(chis) {
+        const chislo = Math.floor(Math.random() *chis);
         return chislo;
       }
 
-      let chislo = getRandomNumber();
+      let chislo1 = getRandomNumber(10);
 
       let chislo2 = prompt("Угадай число от 1 до 10");
-      while (chislo != chislo2) {
-        if (chislo < chislo2) {
-          chislo2 = prompt("Твое число больше. Угадай число от 1 до 10");
+      while (chislo1 != chislo2) {
+        if (chislo1 < chislo2) {
+          chislo2 = prompt("Твое число " + chislo2 + " больше, чем загаданное. Угадай число от 1 до 10");
         }
         else {
-          chislo2 = prompt("Твое число меньше. Угадай число от 1 до 10");
+          chislo2 = prompt("Твое число " + chislo2 + " меньше, чем загаданное. Угадай число от 1 до 10");
         }
       }
       alert("Угадал!" + chislo2);
